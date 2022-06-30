@@ -1,0 +1,26 @@
+.header{
+height: 70px;
+display: flex;
+align-items: center;
+border-bottom: 1px solid gainsboro;
+box-shadow: 2px 2px 2px 1px gainsboro;
+}
+.HomeLink{
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.MoviesLink{
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.activeHomeLink{
+    color: rgb(115, 0, 255);
+}
+.activeMoviesLink{
+    color: rgb(115, 0, 255);
+}

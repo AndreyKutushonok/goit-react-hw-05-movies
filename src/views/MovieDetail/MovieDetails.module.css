@@ -1,0 +1,21 @@
+.infoWrap{
+    display: flex;
+    margin-top: 20px;
+}
+.addInfWrap{
+    margin-top: 20px;
+    border-bottom:1px solid gainsboro ;
+    border-top: 1px solid gainsboro;
+    padding-bottom: 20px;
+}
+.goBackLink{
+    border: 1px solid gray;
+    border-radius: 2px;
+    background-color: gainsboro;
+}
+.infoTextWrap{
+    margin-left: 20px;
+}
+.castLink{
+    margin-right: 10px;
+}
