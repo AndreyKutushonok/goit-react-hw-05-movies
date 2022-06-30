@@ -4,10 +4,10 @@ import Navigation from '../Navigation/Navigation';
 import Loader from 'components/Loader/Loader';
 
 const Homepage = lazy(() => import('views/Homepage/HomepageView'));
-const MoviesPage = lazy(() => import('views/Movies/MoviesView'));
-const MovieInfoPage = lazy(() => import('views/MovieDetail/MovieDetailView'));
-const CastInfo = lazy(() => import('views/Cast/CastView'));
-const ReviewsInfo = lazy(() => import('views/Reviews/ReviewsView'));
+const Movies = lazy(() => import('views/Movies/MoviesView'));
+const MovieDetail = lazy(() => import('views/MovieDetail/MovieDetailView'));
+const Cast = lazy(() => import('views/Cast/CastView'));
+const Reviews = lazy(() => import('views/Reviews/ReviewsView'));
 
 export default function App() {
   return (
@@ -16,10 +16,10 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          <Route path="/movies" element={<MoviesPage />}></Route>
-          <Route path={`/movie/:movieId`} element={<MovieInfoPage />}>
-            <Route path="cast" element={<CastInfo />}></Route>
-            <Route path="reviews" element={<ReviewsInfo />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          <Route path={`/movies/:movieId`} element={<MovieDetail />}>
+            <Route path="cast" element={<Cast />}></Route>
+            <Route path="reviews" element={<Reviews />}></Route>
           </Route>
         </Routes>
       </Suspense>
