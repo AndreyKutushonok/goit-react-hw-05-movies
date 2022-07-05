@@ -33,7 +33,6 @@ export default function MovieInfo() {
       <Link to={location?.state?.from ?? '/'} className={s.goBackLink}>
         Go back
       </Link>
-      {/* при клікі на Go back кидає на сторінку Home, не знаю як це виправити*/}
       {movie && (
         <>
           <div className={s.infoWrap}>
@@ -56,14 +55,14 @@ export default function MovieInfo() {
             <NavLink
               to="cast"
               className={s.castLink}
-              state={{ from: location.state?.from }}
+              state={{ from: location?.state?.from }}
             >
               Cast
             </NavLink>
             <NavLink
               to="reviews"
               className={s.reviewLink}
-              state={{ from: location.state?.from }}
+              state={{ from: location?.state?.from }}
             >
               Reviews
             </NavLink>

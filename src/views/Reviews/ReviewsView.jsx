@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 export default function ReviewsInfo() {
   const { movieId } = useParams();
-  const [reviews, setReviews] = useState(null);
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     async function getReviews() {
@@ -35,7 +35,7 @@ export default function ReviewsInfo() {
           })}
         </ul>
       )}
-      {!reviews && <h2>There is no reviews</h2>}
+      {reviews.length === 0 && <h2>There is no reviews</h2>}
     </>
   );
 }

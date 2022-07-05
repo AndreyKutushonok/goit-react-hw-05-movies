@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 export default function CastInfo() {
   const { movieId } = useParams();
-  const [cast, setCast] = useState(null);
+  const [cast, setCast] = useState([]);
 
   useEffect(() => {
     async function getCast() {
@@ -41,7 +41,7 @@ export default function CastInfo() {
           })}
         </ul>
       )}
-      {!cast && <h2>There is no information about movie cast</h2>}
+      {cast.length === 0 && <h2>There is no information about movie cast</h2>}
     </>
   );
 }
